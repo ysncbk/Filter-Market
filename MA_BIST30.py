@@ -79,7 +79,7 @@ def x30_ma():
         if result.bool() == True:
             price_ma.append(ticker)
         
-    print('The price of those stocks are less than their MA(50) based on adjusted closing prices',price_ma)
+    print('The price of those stocks are greater than their MA(50) based on adjusted closing prices',price_ma)
 
 x30_ma()
 
