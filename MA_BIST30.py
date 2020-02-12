@@ -16,7 +16,7 @@ import pandas as pd
 import os
 import numpy as np
 #set working directory
-os.chdir('C:/Users/yasin/Desktop/python/trading')
+os.chdir('C:/Users/....')
 
 
 def x30_tickers():    
@@ -31,7 +31,7 @@ def x30_tickers():
     return x30
 #x30_tickers()
 
-def get_yahoo_data(reload_x30= False):
+def get_yahoo_data():
     tickers = x30_tickers()
     if not os.path.exists('x30'):
         os.makedirs('x30')   
