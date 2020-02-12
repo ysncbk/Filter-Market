@@ -69,13 +69,13 @@ def x30_ma():
     df = pd.read_csv('xu030_joined_closes.csv',parse_dates=True,index_col=0)
     df = (df.ffill()+df.bfill())/2
     # Calculating the short-window simple moving average
-    ma50 = df.rolling(window=30).mean()
-    ma50.tail(20)
+    ma30 = df.rolling(window=30).mean()
+    ma30.tail(20)
     
     tickers=x30_tickers()
     price_ma=[]
     for ticker in tickers:
-        result = df.iloc[-1:,:][ticker]>ma50.iloc[-1:,:][ticker]
+        result = df.iloc[-1:,:][ticker]>ma30.iloc[-1:,:][ticker]
         if result.bool() == True:
             price_ma.append(ticker)
         
